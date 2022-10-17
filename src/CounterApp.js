@@ -82,9 +82,9 @@ export default function BasicButtons() {
       else if( counterApp % 2 == 0 ) setEsPrimo("No es primo")
       else setEsPrimo("Es primo") 
     }
-  
+  //const arr= [1,2,3,4]
     const historial = () =>{
-        setHistPrimo([...esPrimo,
+        setHistPrimo(prevState =>[prevState, counterApp, esPrimo
            
     
     ])
