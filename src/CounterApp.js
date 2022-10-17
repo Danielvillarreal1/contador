@@ -84,11 +84,12 @@ export default function BasicButtons() {
     }
   //const arr= [1,2,3,4]
     const historial = () =>{
-        setHistPrimo(prevState =>[prevState, counterApp, esPrimo
-           
-    
-    ])
-        console.log(esPrimo)
+       
+        const hist= {
+            value: counterApp,
+            desc: esPrimo    
+        }
+        setHistPrimo(prevState =>[...prevState , hist])
     }
 
     return (
@@ -103,7 +104,7 @@ export default function BasicButtons() {
                 Primo
             </button>
 
-            <h1>historialPrimo: {histPrimo}</h1>
+            <h1>historialPrimo: {JSON.stringify(histPrimo)}</h1>
             <button className='btn btn-primary' type="submit" onClick={historial}> 
                 HistorialPrimo
             </button>
